@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Eigenvalues and Eigenvectors</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+  <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+  <style type="text/css">
+  .myDefaultJSXFont {
+      font-family: "Computer Modern", "Latin Modern", "Century Schoolbook", "Garamond", "Times", "Times New Roman", serif; 
+      font-style: italic;
+  }
+  .myDefaultJSXHighFont {
+      font-family: "Computer Modern", "Latin Modern", "Century Schoolbook", "Garamond", "Times", "Times New Roman", serif; 
+      font-style: italic;
+      font-weight: bold;
+  }
+  </style>
+  <script type="text/javascript">
+  JXG.Options.text.useMathJax = true;
+  JXG.Options.text.cssClass = 'myDefaultJSXFont';
+  JXG.Options.text.highlightCssClass = 'myDefaultJSXHighFont';
+  JXG.Options.text.fontSize = "100%";
+  </script>
+</head>
+<body>
+<div id="header">
+<h1 class="title">Eigenvalues and Eigenvectors</h1>
+</div>
+<script type="text/javascript" src="eigval.js"></script>
+
+<div id="container" style="width:500px; height:500px; float:left;">
+
+</div>
+<div id="input" style="margin-left:500px; padding:2em;">
+Matrix <span class="math">\(A\)</span>:
+<form id="matrixA">
+<table>
+<tr>
+<td>
+<input type="text" id="a11" name="a" value="1.5"></input>
+</td>
+<td>
+<input type="text" id="a12" name="b" value=".2"></input>
+</td>
+</tr>
+<tr>
+<td>
+<input type="text" id="a21" name="c" value=".2"></input>
+</td>
+<td>
+<input type="text" id="a22" name="d" value=".5"></input>
+</td>
+</tr>
+</table>
+</form>
+<button onclick="enter_matrix(A,'matrixA')">
+Change matrix
+</button>
+
+<p><span class="math">\[v&#39; = Av\]</span></p>
+Move the vector <span class="math">\(v\)</span> by dragging the red point. When <span class="math">\(v&#39;\)</span> aligns with <span class="math">\(v\)</span> or <span class="math">\(-v\)</span>, you found an eigenvector.
+</div>
+<script type="text/javascript">
+var A = new Matrix(1,1,1,1,'container');
+enter_matrix(A,'matrixA')
+</script>
+</body>
+</html>
